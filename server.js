@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 // Se tiver frontend, servir a pasta "public"
 app.use(express.static(path.join(__dirname, 'public')));
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
