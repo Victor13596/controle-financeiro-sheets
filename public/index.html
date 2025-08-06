@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle Financeiro</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { color: #333; }
+    form { margin-bottom: 20px; }
+    input, button { padding: 8px; margin: 5px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 8px; }
+    th { background-color: #f2f2f2; }
+  </style>
+</head>
+<body>
+  <h1>Controle Financeiro</h1>
+
+  <form id="lancamentoForm">
+    <input type="text" id="tipo" placeholder="Tipo" required>
+    <input type="text" id="categoria" placeholder="Categoria" required>
+    <input type="number" id="valor" placeholder="Valor" step="0.01" required>
+    <input type="date" id="data" required>
+    <input type="text" id="observacao" placeholder="Observação">
+    <button type="submit">Adicionar</button>
+  </form>
+
+  <h2>Lançamentos</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Categoria</th>
+        <th>Valor</th>
+        <th>Data</th>
+        <th>Observação</th>
+      </tr>
+    </thead>
+    <tbody id="tabelaLancamentos"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
